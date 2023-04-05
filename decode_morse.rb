@@ -18,8 +18,17 @@ def decode_word(morse_word)
   decode_word
 end
 
-decode_word("-- -.--")
+def decode(message)
+  sentence = ''
+  message.split("   ").each do |word|
+    sentence += "#{decode_word(word)} "
+  end
+  sentence
+end
 
-
-
-
+# A
+print decode_char(".-")
+# MY
+print decode_word("-- -.--")
+# A BOX FULL OF RUBIES
+print decode(".-   -... --- -..-   ..-. ..- .-.. .-..   --- ..-.   .-. ..- -... .. . ...")
