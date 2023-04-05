@@ -9,5 +9,17 @@ def decode_char (char)
   end
 end
 
-letter = ".-"
-print decode_char(letter)
+def decode_word(morse_word)
+  morse_chars = morse_word.split(" ")
+  decode_word = ''
+  morse_chars.each do |morse_code|
+    decode_word += decode_char(morse_code)
+  end
+  decode_word
+end
+
+decode_word("-- -.--")
+
+
+
+
